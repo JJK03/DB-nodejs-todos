@@ -137,8 +137,8 @@ router.get('/todoModifyView/:todoId', (req, res) => {
 
 // Handle form submission for modifying a todo
 router.post('/todoModifyPost/:todoId', (req, res) => {
-    const { todoId } = req.params;
-    const { title, user_id } = req.body;
+    const { todoId } = req.params; // get
+    const { title, user_id } = req.body; // post
     const is_completed = req.body.is_completed ? 1 : 0;
 
     const query = 'UPDATE todos SET title = ?, is_completed = ? WHERE todo_id = ?';
