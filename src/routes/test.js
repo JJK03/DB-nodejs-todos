@@ -5,6 +5,9 @@ const db = require('../config/db');
 // Todo list for test
 router.get('/', (req, res) => {
     const query = 'SELECT * FROM todos ORDER BY todo_id DESC';
+    // const query1 = 'SELECT todos.*, users.* FROM todos, users WHERE todos.user_id = users.user_id';
+    // const query2 = '';
+    // const query3 = '';
     db.query(query, (err, results) => {
         if (err) throw err;
         res.render('test/todos-list', {
