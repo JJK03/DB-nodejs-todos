@@ -160,4 +160,9 @@ router.post('/todoDeletePost/:todoId', (req, res) => {
     });
 });
 
+router.get('/all', (req, res) => {
+    res.redirect('/test');
+});
+
+
 module.exports = router;
